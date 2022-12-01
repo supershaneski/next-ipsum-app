@@ -15,6 +15,7 @@ dist-ssr
 _bin
 _pages
 .next
+out
 *.bu.css
 *.bu.jsx
 *.bu.js
