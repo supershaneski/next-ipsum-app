@@ -10,8 +10,12 @@ module.exports = {
         siteTitle: 'Noli Me Ipsum',
     },
     trailingSlash: true,
+    exportPathMap: function() {
+      return {
+        '/': { page: '/' }
+      };
+    },
     experimental:{
       appDir: true,
-      allowMiddlewareResponseBody: true,
     },
 }
