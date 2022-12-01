@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Header from './header'
 import Preview from './preview'
 import { getParagraph } from '../lib/utils'
@@ -24,7 +24,7 @@ const Main = (props) => {
 
     const handleCopy = async () => {
         try {
-            await navigator.clipboard.writeText(texts)
+            await navigator.clipboard.writeText(texts.join("\r\n\r\n"))
         } catch(err) {
             console.log(err)
             tryAgain()
@@ -34,7 +34,8 @@ const Main = (props) => {
     const tryAgain = () => {
         try {
             var tf = document.createElement('textarea')
-            tf.innerText = texts.join("\n")
+            tf.setAttribute('style', 'white-space: pre;')
+            tf.innerText = texts.join("\r\n\r\n")
             document.body.appendChild(tf)
             tf.select()
             document.execCommand('copy')

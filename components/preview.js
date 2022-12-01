@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Preview({ data }) {
+const Preview = ({ data }) => {
     return (
         <div className="preview">
             <div className="inner">
@@ -15,3 +15,5 @@ export default function Preview({ data }) {
         </div>
     )
 }
+
+export default Preview
