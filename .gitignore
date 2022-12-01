@@ -16,6 +16,7 @@ _bin
 _pages
 .next
 out
+build
 *.bu.css
 *.bu.jsx
 *.bu.js

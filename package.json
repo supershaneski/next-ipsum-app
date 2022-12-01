@@ -2,10 +2,10 @@
   "name": "next-ipsum-app",
   "version": "1.0.0",
   "description": "A placeholder text generator",
-  "main": "app/page.js",
+  "main": "index.js",
   "scripts": {
     "dev": "next dev -p 3006",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "test": "echo \"Error: no test specified\" && exit 1"
