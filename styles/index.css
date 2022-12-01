@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'DancingScript';
+    src: local('DancingScript'), url(../fonts/DancingScript-VariableFont_wght.ttf) format('truetype');
+}
+
+body {
+    font-family: 'Times New Roman', Georgia, Times, serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #333;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    max-width: 600px;
+}
+
+h1.title {
+    font-family: 'DancingScript', 'Times New Roman', Georgia, Times, serif;
+    font-size: 2.2em;
+    margin-bottom: 16px !important;
+    text-align: center;
+    font-style: italic;
+}
+p.description {
+    font-size: 1em;
+    line-height: 140%;
+}
+.header {
+    position: relative;
+    padding: 2em 1em 1em 1em;
+}
+.main {
+    position: relative;
+}
+
+.control {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 0 1em;
+}
+.panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    border-bottom: 1px dotted #999;
+}
+.controlPanel {
+    display: flex;
+    align-items: center;
+}
+.label {
+    font-size: 0.8em;
+    margin-right: 5px;
+}
+.label::after {
+    content: ":"
+}
+.count {
+    font-family: 'Times New Roman', Georgia, Times, serif;
+    font-size: 1em;
+    width: 2em;
+    line-height: 140%;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    margin-right: 5px;
+}
+.button {
+    background-color: #ea4c89;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Times New Roman', Georgia, Times, serif;
+    font-size: 0.8em;
+    font-weight: 500;
+    height: 40px;
+    line-height: 140%;
+    margin: 0;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    user-select: none;
+    touch-action: manipulation;
+}
+.button:hover,
+.button:focus {
+    background-color: #f082ac;
+}
+
+.preview {
+    position: relative;
+    padding: 0 1em 1em 1em;
+}
+.inner {
+    position: relative;
+    border-bottom: 1px dotted #999;
+    border-left: 1px dotted #999;
+    border-right: 1px dotted #999;
+    padding: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color: #ffffff22;
+}
+.paragraph {
+    margin-bottom: 1em;
+}
+.paragraph:last-child {
+    margin-bottom: 0;
+}
+@media (min-width: 400px) {
+    h1.title {
+        font-size: 2.5em;
+    }
+    p.description {
+        font-size: 1.1em;
+    }
+    .label {
+        font-size: 1em;
+    }
+    .button {
+        font-size: 1em;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #f8e5d3;
+        color: #555;
+    }
+    .inner {
+        border-bottom: 1px dotted #e7a465;
+        border-left: 1px dotted #e7a465;
+        border-right: 1px dotted #e7a465;
+        background-color: #ffffff99;
+    }
+    .count {
+        border: 1px solid #999;
+    }
+    .control {
+        background-color: #f8e5d3;
+    }
+    .panel {
+        border-bottom: 1px dotted #e7a465;
+    }
+}
