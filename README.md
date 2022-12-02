@@ -1,9 +1,11 @@
 next-ipsum-app
 ==========
 
-This is a placeholder text generator based on excerpts taken from the novel **Noli Me Tangere** by _Jose Rizal_.
+Generate placeholder text based on excerpts taken from the novel **Noli Me Tangere** by _Jose Rizal_. You can use this as an alternative to the commonly known Lorem ipsum. The text are in Spanish as originally written by Rizal. You can find the source from this [link](https://gutenberg.org/ebooks/47584).
 
-The project is created by [manual setup](https://nextjs.org/docs/getting-started#manual-setup) using the latest [`Next.js` version](https://nextjs.org/blog/next-13).
+Demo site: [https://noli-ipsum-app.vercel.app/](https://noli-ipsum-app.vercel.app/)
+
+This React project is created by [manual setup](https://nextjs.org/docs/getting-started#manual-setup) using the latest [`Next.js` version](https://nextjs.org/blog/next-13).
 
 # Setup
 
