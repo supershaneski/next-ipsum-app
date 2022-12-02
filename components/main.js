@@ -10,18 +10,6 @@ const Main = (props) => {
     const [count, setCount] = useState(1)
     const [texts, setTexts] = useState([props.data[0]])
     
-    const handleGenerate = () => {
-
-        if(!(isNaN(count) || count.length === 0 || parseInt(count) === 0)) {
-
-            const items = getParagraph(props.data, parseInt(count))
-
-            setTexts(items)
-
-        }
-
-    }
-
     const handleCopy = async () => {
         try {
             await navigator.clipboard.writeText(texts.join("\r\n\r\n"))
@@ -45,6 +33,19 @@ const Main = (props) => {
         }
     }
 
+    const handleGenerate = (e) => {
+        e.preventDefault()
+
+        if(!(isNaN(count) || count.length === 0 || parseInt(count) === 0)) {
+
+            const items = getParagraph(props.data, parseInt(count))
+
+            setTexts(items)
+
+        }
+
+    }
+
     return (
         <>
             <div className="container">
@@ -52,11 +53,19 @@ const Main = (props) => {
                 <main className="main">
                     <div className="control">
                         <div className="panel">
-                            <div className="controlPanel">
-                                <label className="label">Paragraphs</label>
-                                <input maxLength={2} className="count" type="text" value={count} onChange={(e) => setCount(e.target.value)} />
-                                <button className="button" onClick={handleGenerate}>Generate</button>
-                            </div>
+                            <form onSubmit={handleGenerate} noValidate>
+                                <div className="controlPanel">
+                                    <label className="label">Paragraphs</label>
+                                    <input 
+                                    className="count" 
+                                    type="text" 
+                                    maxLength={2} 
+                                    value={count} 
+                                    onChange={(e) => setCount(e.target.value)}
+                                    />
+                                    <button className="button" type="submit">Generate</button>
+                                </div>
+                            </form>
                             <button className="button" onClick={handleCopy}>Copy Text</button>
                         </div>
                     </div>
