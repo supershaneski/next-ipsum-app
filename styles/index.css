@@ -76,20 +76,17 @@ p.description {
     font-size: 0.8em;
     margin-right: 5px;
 }
-.label::after {
-    content: ":"
-}
 .count {
     font-family: 'Times New Roman', Georgia, Times, serif;
     font-size: 1em;
     width: 2em;
     line-height: 140%;
-    border: 1px solid #fff;
+    border: 1px solid #999;
     border-radius: 8px;
     text-align: center;
     text-decoration: none;
     outline: none;
-    background-color: transparent;
+    background-color: #ffffff22;
     margin-right: 5px;
 }
 .button {
@@ -165,7 +162,8 @@ p.description {
         background-color: #ffffff99;
     }
     .count {
-        border: 1px solid #999;
+        border: 1px solid #e7a465;
+        background-color: #ffffff99;
     }
     .control {
         background-color: #f8e5d3;

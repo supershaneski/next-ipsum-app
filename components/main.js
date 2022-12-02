@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import Header from './header'
 import Preview from './preview'
 import { getParagraph } from '../lib/utils'
@@ -55,7 +55,7 @@ const Main = (props) => {
                         <div className="panel">
                             <form onSubmit={handleGenerate} noValidate>
                                 <div className="controlPanel">
-                                    <label className="label">Paragraphs</label>
+                                    <label className="label">Paragraphs:</label>
                                     <input 
                                     className="count" 
                                     type="text" 
